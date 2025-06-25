@@ -1,0 +1,13 @@
+pipeline {
+    agent {
+        label 's1'
+    }
+
+    stages {
+        stage('git') {
+            steps {
+                git branch:     'develop' , url: 'https://github.com/varun14112000/JenkinsProject.git'
+            }
+        }
+    }
+}
